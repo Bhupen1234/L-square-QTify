@@ -16,21 +16,24 @@ const TopAlbumSection = () => {
   },[])
   return (
     <div className={styles.wrapper}>
-      
+      <div className={styles.text}>
+        <p >Top Albums</p>
+        <p >Collapse</p>
+      </div>
     { topAlbumsData.length>0 &&
 
     
-      (<Grid container spacing={1}>
+      (<div className={styles.container}>
         {
           topAlbumsData.map((album)=>{
             return (
-              <Grid item key={album.id} md={1.5}>
+              <div className={styles.item} key={album.id}>
                  <Card data={album} type="album"/>
-              </Grid>
+              </div>
             )
           })
         }
-      </Grid>
+      </div>
       )
     }
     </div>

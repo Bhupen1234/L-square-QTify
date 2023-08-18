@@ -1,6 +1,29 @@
 .wrapper{
- 
     width:1353px;
-    height:  488px;
+    margin: 18px;
+    /* border: 2px solid red; */
+}
+
+.container{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 37px;
+    flex-wrap: wrap;
+}
+
+.text{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 18px;
     
 }
+
+.text p:first-child {
+    color: var(--color-white);
+}
+.text p:last-child {
+    color: var(--color-primary);
+}
+
