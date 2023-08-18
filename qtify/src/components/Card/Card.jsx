@@ -1,22 +1,33 @@
-import React from 'react'
+import React from "react";
+import Chip from '@mui/material/Chip';
 import styles from "./Card.module.css"
-const Card = () => {
-  return (
-    <div className={styles.wrapper}>
-      <div className={styles.card}>
-        <div className={styles.card_img}>
-         <img src="https://images.pexels.com/photos/8197559/pexels-photo-8197559.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800" alt='' height="170px" width="159px"/>
-        </div>
-        <div className={styles.card_follows}>
-           100 Follows
-        </div>
-      </div>
-      <div  className={styles.card_title}>
-       New Bollywood
-      </div>
-       
-    </div>
-  )
-}
+import { Tooltip } from "@mui/material";
+const Card = ({ data, type }) => {
+  const getCard = (type) => {
+    switch (type) {
+      case "album": {
+        const {image, follows, title,songs} = data;
+        console.log(image);
+        return (
+          <Tooltip title={`${songs?.length} songs`} placement="top" arrow>
+          <div className={styles.wrapper}>
+            <div className={styles.card}>
+              <img src={image} alt="Album_image" />
+              <div className={styles.banner}>
+                <Chip label={`${follows} Follows`} className={styles.chip}/>
+              </div>
+            </div>
+            <div className={styles.titleWrapper}>
+              <p>{title}</p>
+            </div>
+          </div>
+          </Tooltip>
+        );
+      }
+      default : return <></>
+    }
+  };
+  return getCard(type);
+};
 
-export default Card
+export default Card;

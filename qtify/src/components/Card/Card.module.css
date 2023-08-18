@@ -1,41 +1,48 @@
 .wrapper{
-    height: 232px;
-    width:159px;
-  
+ width: 160px;
+ /* height: 205px; */
 }
 
 .card{
-    width: 100%;
-   height:205px ;
-   background-color: var(--color-white);
+   position: relative;
+   width: 100%;
+   height: 205px;
    border-radius: 10px;
+   overflow: hidden;
+
 
 }
-
-.card_img img{
-    border-radius: 10px 10px 0px 0px;
-}
-
-.card_follows{
-    width: 71px;
-    height: 23px;
-    border-radius: 10px;
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   color:var(--color-white) ;
-   padding: 1px;
-   font-size: 10px;
-    background-color: var(--color-black);
-    margin: 2px;
+.card img{
+    width: 100%;
+   height: 205px;
 }
 
 
 
-.card_title{
-    
-    font-size: 14px;
-    color: var(--color-white);
-    margin-top: 6px;
+
+.banner{
+  position: absolute;
+  padding: 6px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  display:flex ;
+  align-items: center;
+ 
+}
+
+.titleWrapper{
+margin-top: 6px;
+overflow: hidden;
+text-overflow: ellipsis;
+color: var(--color-white);
+}
+
+.chip{
+background-color: var(--color-black) !important;
+color: var(--color-white) !important;
 }
 
