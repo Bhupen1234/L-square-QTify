@@ -5,7 +5,8 @@ const AlbumSection = () => {
   return (
     <div className={styles.wrapper}>
       <TopAlbumSection/>
-     
+     <hr/>
+     <TopAlbumSection/>
     </div>
   )
 }

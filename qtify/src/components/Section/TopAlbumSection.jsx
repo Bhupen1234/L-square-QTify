@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./TopAlbumSection.module.css"
-import { Grid } from '@mui/material'
+
 import Card from "../Card/Card"
 import { fetchTopAlbums } from '../../api/api'
 const TopAlbumSection = () => {

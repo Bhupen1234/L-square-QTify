@@ -1,14 +1,15 @@
 .wrapper{
-    width:1353px;
+    /* width:1353px; */
     margin: 18px;
     /* border: 2px solid red; */
 }
 
 .container{
-    display: inline-flex;
+    display: flex;
     align-items: flex-start;
-    gap: 37px;
+    gap: 30px;
     flex-wrap: wrap;
+    
 }
 
 .text{
@@ -25,5 +26,6 @@
 }
 .text p:last-child {
     color: var(--color-primary);
+    cursor: pointer;
 }
 
