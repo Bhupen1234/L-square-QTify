@@ -26,3 +26,27 @@ export const fetchNewAlbums =async ()=>{
         console.error(error);
     }
 }
+
+export const fetchSongs=async ()=>{
+    try {
+       
+        const res= await axios.get(`${BACKEND_ENDPOINT}/songs`);
+       
+        return (res.data);
+    } catch (error) {
+        
+        console.error(error);
+    }
+}
+
+export const fetchSongsGenre=async ()=>{
+    try {
+       
+        const res= await axios.get(`${BACKEND_ENDPOINT}/genres`);
+       
+        return (res.data);
+    } catch (error) {
+        
+        console.error(error);
+    }
+}

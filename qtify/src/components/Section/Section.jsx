@@ -3,8 +3,9 @@ import Card from "../Card/Card";
 import React, { useState } from "react";
 import styles from "./Section.module.css";
 import Carousel from "../Carousel/Carousel";
+import BasicTabs from "../BasicTabs/BasicTabs";
 
-const Section = ({ title, data, type }) => {
+const Section = ({ title, data, type ,handleChange,value,songGenreData}) => {
   const [carouselToggle, setCraouselToggle] = useState(true);
 
   const handleToggle = () => {
@@ -16,9 +17,13 @@ const Section = ({ title, data, type }) => {
       <div className={styles.header}>
         <h3>{title}</h3>
         <h3 className={styles.toggleText} onClick={handleToggle}>
-          {carouselToggle ? "Show All" : "Colapse"}
+          {type!=="song" && (carouselToggle ? "Show All" : "Colapse")}
         </h3>
+
       </div>
+      {
+        type==="song" && <BasicTabs handleChange={handleChange} value={value} songGenreData={songGenreData} />
+      }
       {data.length === 0 ? (
         <CircularProgress />
       ) : (

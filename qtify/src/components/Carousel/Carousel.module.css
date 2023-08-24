@@ -4,15 +4,17 @@
   justify-content: space-between;
 }
 .leftNavigation{
-position: absolute;
-top: 40%;
-transform: translateY(-50%) ;
+  position: absolute;
+  left: 17px ;
+  top:40% ;
+  transform: translate(-50%);
+  
 z-index: 2;
 }
 .rightNavigation{
-    position: absolute;
-    right: 10px;
-    top: 40%;
-    transform: translateY(-50%) ;
-    z-index: 2;
+  position: absolute;
+  right: 1px ;
+  top:40% ;
+  transform: translate(-50%);
+  z-index: 10;
 }

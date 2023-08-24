@@ -29,6 +29,10 @@ img,svg{
   max-width: 100%;
 }
 
+.css-1aquho2-MuiTabs-indicator {
+  background-color: var(--color-primary) !important;
+}
+
 
 
 
