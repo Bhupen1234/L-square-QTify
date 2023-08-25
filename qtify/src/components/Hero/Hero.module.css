@@ -4,3 +4,14 @@
     justify-content: center ;
     align-items: center;
 }
+@media only screen and (max-width: 480px)
+{
+   
+    .heroImg{
+        width: 6rem;
+    }
+    .wrapper{
+        height: 150px;
+    }
+}
+

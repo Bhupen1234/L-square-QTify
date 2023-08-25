@@ -6,6 +6,9 @@ import Hero from "./components/Hero/Hero";
 import Section from "./components/Section/Section";
 import { useEffect, useState } from "react";
 import { fetchNewAlbums, fetchSongs, fetchSongsGenre, fetchTopAlbums } from "./api/api";
+import BasicAccordion from "./components/BasicAccordion/BasicAccordion";
+import { faqQuestions } from "./mockdata/faqQuestions";
+export
 
 function App() {
   const [topAlbumsData, setTopAlbumsData] = useState([]);
@@ -97,7 +100,15 @@ function App() {
         <Section type="album" title="New Albums" data={newAlbumsData} />
         <hr />
         <Section type="song" title="Songs" data={filteredData} handleChange={handleChange} value={value} songGenreData={songGenreData}/>
+        <hr />
       </div>
+     
+      <div className={styles.accordionWrapper}>
+      <h1 style={{textAlign:"center"}}>FAQs</h1>
+      <BasicAccordion faqQuestions={faqQuestions}/>
+      </div>
+      
+      
     </div>
   );
 }

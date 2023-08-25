@@ -36,7 +36,30 @@ img,svg{
 
  .swiper-slide{
     width: auto !important;
-  } 
+  }
+
+  .MuiAccordion-root{
+    background-color: var(--color-black) !important;
+    border : 1px solid var(--color-white);
+    color: var(--color-white) !important;
+    width: 100% !important;
+    margin-top: 24px;
+    width: 60vw !important;
+
+  }
+  .MuiAccordion-rounded{
+    border-radius: 10px !important;
+  }
+
+  .MuiAccordionSummary-expandIconWrapper{
+    color: var(--color-primary) !important;
+  }
+  
+  .MuiAccordionDetails-root{
+    color: var(--color-black);
+    background-color: var(--color-white);
+  }
+
 
 
 

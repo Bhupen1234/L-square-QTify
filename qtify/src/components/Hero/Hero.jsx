@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className={styles.wrapper}>
       <HeroText text1="100 Thousand Songs, ad-free" text2="Over thousands podcast episodes"/>
-      <HeroImg/>
+      <HeroImg className={styles.heroImg}/>
     </div>
   )
 }
