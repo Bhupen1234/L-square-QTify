@@ -1,0 +1,38 @@
+.wrapper{
+    display: flex;
+  
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   width: 75vw;
+   
+}
+
+.songContent{
+   
+    display: flex;
+   
+    
+    align-items: center;
+    align-self: flex-start;
+    
+}
+
+
+
+
+.linearProgress{
+    width: 50vw;
+    
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  align-self: center;
+   
+    
+}
+
+.linearProgress img{
+   margin-bottom: 24px;
+}

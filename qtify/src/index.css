@@ -43,7 +43,8 @@ img,svg{
     border : 1px solid var(--color-white);
     color: var(--color-white) !important;
     width: 100% !important;
-    margin-top: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     width: 60vw !important;
 
   }

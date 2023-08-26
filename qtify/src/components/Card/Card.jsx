@@ -2,7 +2,7 @@ import React from "react";
 import Chip from '@mui/material/Chip';
 import styles from "./Card.module.css"
 import { Tooltip } from "@mui/material";
-const Card = ({ data, type }) => {
+const Card = ({ data, type,handleSongChange }) => {
   const getCard = (type) => {
     switch (type) {
       case "album": {
@@ -29,9 +29,9 @@ const Card = ({ data, type }) => {
       case "song":{
         const {image,likes,title} =data;
         return(
-          <div className={styles.wrapper}>
+          <div className={styles.wrapper} onClick={()=>handleSongChange(data)}>
             <div className={styles.card}>
-              <img src={image} alt="Song_Image" />
+              <img src={image} alt="Song_Image"  />
               <div className={styles.banner}>
                 <Chip label={`${likes} Likes`} className={styles.chip}/>
               </div>

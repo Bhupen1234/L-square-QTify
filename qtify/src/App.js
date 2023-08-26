@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { fetchNewAlbums, fetchSongs, fetchSongsGenre, fetchTopAlbums } from "./api/api";
 import BasicAccordion from "./components/BasicAccordion/BasicAccordion";
 import { faqQuestions } from "./mockdata/faqQuestions";
+import SongPlayer from "./components/SongPlayer/SongPlayer";
 export
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
   const [newAlbumsData, setNewAlbumsData] = useState([]);
   const [songGenreData, setSongGenreData] = useState([])
   const [songsData, setSongsData] = useState([]);
-  const [filteredData,setFilteredData] = useState([])
+  const [filteredData,setFilteredData] = useState([]);
+  const [currentSongData,setCurrentSongData] =useState([]);
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -78,6 +80,11 @@ function App() {
     setFilteredData(result);
   }
 
+
+  const handleSongChange=(songData)=>{
+    setCurrentSongData(songData);
+  }
+
   useEffect(() => {
     generateTopAlbumData();
     generateNewAlbumsData();
@@ -86,20 +93,22 @@ function App() {
     
   }, []);
 
+
+
   useEffect(()=>{
   generateSongsData(value)
   },[value])
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar  data={topAlbumsData}/>
       <Hero />
       <div className={styles.sectionWrapper}>
         <Section type="album" title="Top Albums" data={topAlbumsData} />
         <hr />
         <Section type="album" title="New Albums" data={newAlbumsData} />
         <hr />
-        <Section type="song" title="Songs" data={filteredData} handleChange={handleChange} value={value} songGenreData={songGenreData}/>
+        <Section type="song" title="Songs" data={filteredData} handleChange={handleChange} value={value} songGenreData={songGenreData} handleSongChange={handleSongChange}/>
         <hr />
       </div>
      
@@ -107,6 +116,10 @@ function App() {
       <h1 style={{textAlign:"center"}}>FAQs</h1>
       <BasicAccordion faqQuestions={faqQuestions}/>
       </div>
+      <hr />
+     {currentSongData!==[] && <SongPlayer currentSongData={currentSongData}/>}
+    
+      
       
       
     </div>

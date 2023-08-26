@@ -5,7 +5,7 @@ import styles from "./Section.module.css";
 import Carousel from "../Carousel/Carousel";
 import BasicTabs from "../BasicTabs/BasicTabs";
 
-const Section = ({ title, data, type ,handleChange,value,songGenreData}) => {
+const Section = ({ title, data, type ,handleChange,value,songGenreData,handleSongChange}) => {
   const [carouselToggle, setCraouselToggle] = useState(true);
 
   const handleToggle = () => {
@@ -36,7 +36,7 @@ const Section = ({ title, data, type ,handleChange,value,songGenreData}) => {
             })}
             </div>
           ) : (
-            <Carousel data={data} renderCardComponent={(ele)=> <Card data={ele} type={type}/> }/>
+            <Carousel data={data} renderCardComponent={(ele)=> <Card data={ele} type={type} handleSongChange={handleSongChange}/> }/>
           )}
         </div>
       )}

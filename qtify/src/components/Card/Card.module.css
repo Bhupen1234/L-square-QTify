@@ -1,6 +1,7 @@
 .wrapper{
  width: 160px;
  /* height: 205px; */
+ cursor: pointer;
 }
 
 .card{
