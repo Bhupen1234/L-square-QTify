@@ -13,7 +13,7 @@ const Section = ({ title, data, type ,handleChange,value,songGenreData,handleSon
   };
 
   return (
-    <div>
+    <div >
       <div className={styles.header}>
         <h3>{title}</h3>
         <h3 className={styles.toggleText} onClick={handleToggle}>
@@ -40,7 +40,7 @@ const Section = ({ title, data, type ,handleChange,value,songGenreData,handleSon
           )}
         </div>
       )}
-    </div>
+    </div >
   );
 };
 

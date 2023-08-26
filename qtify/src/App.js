@@ -14,6 +14,7 @@ export
 function App() {
   const [topAlbumsData, setTopAlbumsData] = useState([]);
   const [newAlbumsData, setNewAlbumsData] = useState([]);
+  const [allAlbumsData,setAllAlbumsData] = useState([])
   const [songGenreData, setSongGenreData] = useState([])
   const [songsData, setSongsData] = useState([]);
   const [filteredData,setFilteredData] = useState([]);
@@ -84,12 +85,13 @@ function App() {
   const handleSongChange=(songData)=>{
     setCurrentSongData(songData);
   }
-
+ 
   useEffect(() => {
     generateTopAlbumData();
     generateNewAlbumsData();
     generateAllSongsData();
     generateSongsGenresData()
+  
     
   }, []);
 
@@ -101,15 +103,15 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar  data={topAlbumsData}/>
+      <Navbar  data={[...topAlbumsData,...newAlbumsData]}/>
       <Hero />
       <div className={styles.sectionWrapper}>
         <Section type="album" title="Top Albums" data={topAlbumsData} />
         <hr />
         <Section type="album" title="New Albums" data={newAlbumsData} />
-        <hr />
+       <hr />
         <Section type="song" title="Songs" data={filteredData} handleChange={handleChange} value={value} songGenreData={songGenreData} handleSongChange={handleSongChange}/>
-        <hr />
+       <hr />
       </div>
      
       <div className={styles.accordionWrapper}>

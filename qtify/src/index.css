@@ -61,6 +61,17 @@ img,svg{
     background-color: var(--color-white);
   }
 
+  .MuiAutocomplete-root .MuiInputBase-root{
+    width: 35vw;
+      background-color: white;
+      height: 48px;
+      border-radius: 8px;
+ border-top-right-radius: 0px;
+ border-bottom-right-radius: 0px;
+ border: 1px solid var(--color-black);
+  }
+
+ 
 
 
 
