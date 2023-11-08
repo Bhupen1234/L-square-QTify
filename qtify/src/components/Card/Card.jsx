@@ -2,7 +2,18 @@ import React from "react";
 import Chip from '@mui/material/Chip';
 import styles from "./Card.module.css"
 import { Tooltip } from "@mui/material";
-const Card = ({ data, type,handleSongChange }) => {
+import { useNavigate } from "react-router-dom";
+import SongPage from "../SongPage/SongPage";
+
+const Card = ({ data, type,handleSongChange ,receiveSongDataFromCard}) => {
+  let navigate = useNavigate();
+const navigateToSongsPage =(data)=>{
+  receiveSongDataFromCard(data);
+
+  navigate("/songs");
+}
+
+
   const getCard = (type) => {
     switch (type) {
       case "album": {
@@ -10,8 +21,9 @@ const Card = ({ data, type,handleSongChange }) => {
        
         return (
 
-          <Tooltip title={`${songs.length} songs`} placement="top" arrow>
-          <div className={styles.wrapper}>
+          <Tooltip title={`${songs.length} songs`} placement="top" arrow >
+          <div className={styles.wrapper} onClick={()=>navigateToSongsPage(data)}>
+           
             <div className={styles.card}>
               <img src={image} alt="Album_image" />
               <div className={styles.banner}>

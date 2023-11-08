@@ -13,6 +13,7 @@ const SearchBar = ({placeholder,data}) => {
         freeSolo
         id="free-solo-2-demo"
         disableClearable
+       
         options={data.map((option)=>option.title)}
        
 

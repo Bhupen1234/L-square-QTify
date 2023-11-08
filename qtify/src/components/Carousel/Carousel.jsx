@@ -20,7 +20,7 @@ const Controls = ({ data }) => {
   return <></>
 };
 
-const Carousel = ({ data, renderCardComponent }) => {
+const Carousel = ({ data, renderCardComponent , receiveSongDataFromCard}) => {
   return (
     <div className={styles.wrapper}>
       <Swiper

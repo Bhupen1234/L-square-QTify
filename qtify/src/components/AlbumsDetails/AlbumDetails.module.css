@@ -1,0 +1,41 @@
+.wrapper{
+    display: flex;
+   gap: 60px;
+    align-items: center;
+    margin-top: 94px;
+}
+
+.textWrapper{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 661px;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.description{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.year{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.subDetails{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.imageWrapper>img{
+    width: 288px;
+height: 329px;
+border-radius: 20px;
+}
+

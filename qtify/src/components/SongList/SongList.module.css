@@ -1,0 +1,7 @@
+table {
+    border-collapse: separate;
+    border-spacing: 10px; /* Adjust the value to set the gap width */
+}
+th, td {
+    padding: 10px; /* Optional: Add padding to cells for more spacing */
+}

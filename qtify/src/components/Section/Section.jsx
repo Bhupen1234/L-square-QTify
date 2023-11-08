@@ -5,7 +5,7 @@ import styles from "./Section.module.css";
 import Carousel from "../Carousel/Carousel";
 import BasicTabs from "../BasicTabs/BasicTabs";
 
-const Section = ({ title, data, type ,handleChange,value,songGenreData,handleSongChange}) => {
+const Section = ({ title, data, type ,handleChange,value,songGenreData,handleSongChange,receiveSongDataFromCard}) => {
   const [carouselToggle, setCraouselToggle] = useState(true);
 
   const handleToggle = () => {
@@ -32,11 +32,11 @@ const Section = ({ title, data, type ,handleChange,value,songGenreData,handleSon
             <div className={styles.wrapper}>
               
             {data.map((ele) => {
-              return <Card data={ele} type={type} key={ele.id} />;
+              return <Card data={ele} type={type} key={ele.id} receiveSongDataFromCard={receiveSongDataFromCard}/>;
             })}
             </div>
           ) : (
-            <Carousel data={data} renderCardComponent={(ele)=> <Card data={ele} type={type} handleSongChange={handleSongChange}/> }/>
+            <Carousel data={data} renderCardComponent={(ele)=> <Card data={ele} type={type} handleSongChange={handleSongChange}  receiveSongDataFromCard={receiveSongDataFromCard}/> }/>
           )}
         </div>
       )}
