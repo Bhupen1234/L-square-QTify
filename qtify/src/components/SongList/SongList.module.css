@@ -2,6 +2,67 @@ table {
     border-collapse: separate;
     border-spacing: 10px; /* Adjust the value to set the gap width */
 }
-th, td {
+ td,th {
     padding: 10px; /* Optional: Add padding to cells for more spacing */
+    
+}
+
+th{
+    text-align: start;
+}
+
+
+
+
+
+.wrapper{
+    width: 100%;
+}
+
+table{
+    width: 100%;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.pagination{
+    width: 20vw;
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.disabled{
+    display: none;
+}
+
+
+.selected{
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 100%;
+   background-color: var(--color-primary);
+   height: 20px;
+   width: 20px;
+
+   cursor: pointer;
+}
+
+.notSelected{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+
+.arrow{
+    cursor: pointer;
 }

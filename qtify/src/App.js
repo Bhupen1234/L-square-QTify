@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 export
 
 function App() {
-  const [songsData, setSongsData ] =  useState({})
+  const [songsData, setSongsData ] =  useState([])
 
   // Callback function to receive data from the child
   const receiveSongDataFromCard = (data) => {

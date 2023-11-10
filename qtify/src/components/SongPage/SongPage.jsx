@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import AlbumDetails from '../AlbumsDetails/AlbumDetails'
 import styles from "./SongPage.module.css"
 import SongList from '../SongList/SongList'
+import SongPlayer from '../SongPlayer/SongPlayer'
 const SongPage = ({songsData}) => {
   console.log(songsData);
   return (
@@ -13,8 +14,11 @@ const SongPage = ({songsData}) => {
       <AlbumDetails data={songsData}/>
       <SongList data={songsData.songs}/>
       
+      
+      
       </div>
-    
+      <hr />
+      <SongPlayer/>
 
     </div>
   )
